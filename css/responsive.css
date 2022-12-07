@@ -1,0 +1,231 @@
+@media (max-width:767px){
+    .search input[type="text"]{
+        display: none;
+    }
+
+    header .search svg{
+        width: 35px;
+        height: 35px;
+        padding: 10px;
+        border-radius: 50%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box !important;
+        background: #fff;
+        color: #000;
+        box-shadow: 1px 1px 1px 1px #0006;
+    }
+    header .notification .item {
+        width: 35px;
+        height: 35px;
+    }
+    header .notification .item svg {
+        font-size: 17px;
+    }
+    #searchInput{
+    position: absolute;
+    top: 30px;
+    background: #ffffff;
+    color: #000;
+    z-index: 2;
+    padding: 10px 20px;
+    }
+
+    .search .show{
+        display: block !important;
+    }
+    header .intranetHeading h1 {
+        font-size: 17px;
+        margin: 0;
+    }
+    header .logo {
+        padding: 15px 10px;
+    }
+    header .logo img{
+        width:100%;
+    }
+    header .rightHeader {
+        padding: 10px 5px;
+    }
+    .sideNav .profile {
+        padding: 10px;
+        overflow: hidden;
+        padding-top: 40px;
+    }
+
+    .sideNav .userImg img{
+        width:30px;
+    }
+    .sideNav .profile .userName {
+        margin: 10px 0 5px;
+        font-size: 17px;
+        white-space: nowrap;
+    }
+    .sideNav .profile .userMail {
+        font-size: 14px;
+    }    
+    .sideNav .menu {
+        padding: 5px 10px;
+    }
+    .sideNav .sticky{
+        overflow: hidden;
+    }
+    .sideNav {
+        width: 100%;
+        max-width: 15%;
+        transition: .5s ease-in-out;
+    }
+    .sideNavShow{
+        max-width: 50%;
+    }
+    .stickyItem {
+        max-width: 15%;
+    }
+    .mainContent {
+        width: 85%;
+    }
+    .sideNavShow #responsiveHide svg{
+        color: #777;
+        font-size: 18px;
+    }
+    .sideNav .menu ul li {
+        margin: 0px 0;
+    }
+    .sideNav .menu ul li a {
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .sideNav .menu .active, .sideNav .menu ul li:hover {
+        padding-left: 10px;
+    }
+    .sideNav .menu ul li a svg {
+        margin-right: 25px;
+        width: 20px;
+        transition: .5s ease-in-out;
+    }
+    .sideNavShow .menu ul li a svg{
+        margin-right:5px;
+    }
+
+    .sideNav #responsiveHide{
+        display: block;
+    }
+    #responsiveHide{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9;
+        padding: 5px;
+        background: #eee;
+    }
+    .sideNav .profile .logout {
+        position: absolute;
+        left: 0;
+        right:auto;
+        top: 0;
+        background: #eee;
+        padding: 5px;
+        z-index: -1;
+    }
+    .sideNavShow .profile .logout {
+        z-index: 0;
+        transition: .5s ease-in-out;
+    }
+    .poll {
+        padding: 10px;
+        margin: 0px;
+        border-radius: 0px;
+        white-space: nowrap;
+    }
+    .heading h4 {
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    .poll .heading {
+        margin-bottom: 20px;
+    }
+    .poll ul li {
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+    .poll a {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .mainContent .sliderCMD .slider img {
+        height: 100px;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        width: 15px;
+        height: 15px;
+        margin: 0 5px;
+    }
+
+    .cmd{
+        margin-top: 20px;
+    }
+
+    .slider .svg-inline--fa{
+        font-size: 10px;
+    }
+    .myApps, .quickLinks, .holidayList {
+        height: auto;
+    }
+
+    .birthdays, .weather {
+        height: auto;
+    }
+    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+        background: #eee;
+        font-size: 22px;
+        width: 20px;
+        height: 20px;
+    }
+    .owl-nav button span {
+        padding: 0px;
+        line-height: 15px;
+        height: 20px;
+    }
+    .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav {
+        top: -30px;
+    }
+
+    .holidayList .holiday {
+        font-size: 22px;
+        word-break: break-all;
+    }
+    .holidayList .item {
+        overflow: hidden;
+    }
+    footer .upperFooter {
+        padding: 20px 10px;
+    }
+    footer .footerItem{
+        margin-bottom: 25px;
+    }
+    footer .upperFooter .col-md-3:nth-last-child(1) .footerItem{
+        margin-bottom:0;   
+    }
+    footer .footerItem .footerHead {
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+    footer .footerItem ul li a {
+        color: #fff;
+        font-size: 14px;
+    }    
+    footer .footerBottom .center {
+        text-align: left;
+    }
+    footer .footerBottom .right .d-flex {
+        justify-content: start;
+        margin: 10px 0 0;
+    }
+    footer .footerBottom {
+        padding: 10px;
+    }
+}
