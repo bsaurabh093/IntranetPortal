@@ -34,6 +34,10 @@ hr{
     margin-top: 20px;
 }
 
+.mb-20{
+    margin-bottom: 20px;
+}
+
 li{
     margin:0;
     padding:0;
@@ -1019,11 +1023,32 @@ footer .footerBottom .email a{
 
 .department .centerSection .owl-prev{
     position: relative;
-    left:-30px;
+    transition: .5s ease-in-out;
+    left:-45px;
 }
 
 .department .centerSection .owl-next{
     position: relative;
-    right:-20px;
+    transition: .5s ease-in-out;
+    right:-40px;
 }
+
+.centerSection .owl-carousel.owl-loaded {
+    display: block;
+    overflow: hidden;
+}
+
+.centerSection .owl-carousel:hover .owl-prev{
+    left:3px;
+}
+
+.centerSection .owl-carousel:hover .owl-next{
+    right:10px;
+}
+
+.centerSection .item{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+} 
 /* Department End */

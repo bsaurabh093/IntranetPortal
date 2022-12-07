@@ -76,13 +76,30 @@
                                 </marquee>
                            </div>
                            <div class="centerSection">
-                                <div class="owl-carousel">
-                                    <div class="item"><img src="img/bd/Slider-19052020-1.png" alt=""></div>
-                                    <div class="item"><img src="img/bd/BD1.png" alt=""></div>
-                                    <div class="item"><img src="img/bd/BD2 (1).png" alt=""></div>
-                                    <div class="item"><img src="img/bd/BD2.png" alt=""></div>
-                                    <div class="item"><img src="img/bd/Slider-19052020-3.png" alt=""></div>
-                                </div>
+                                <div class="mainSlider">
+                                    <div class="owl-carousel">
+                                        <div class="item"><img src="img/bd/Slider-19052020-1.png" alt=""></div>
+                                        <div class="item"><img src="img/bd/BD1.png" alt=""></div>
+                                        <div class="item"><img src="img/bd/BD2 (1).png" alt=""></div>
+                                        <div class="item"><img src="img/bd/BD2.png" alt=""></div>
+                                        <div class="item"><img src="img/bd/Slider-19052020-3.png" alt=""></div>
+                                    </div>
+                                </div> 
+                                <div class="smallSlider mt-20 mb-20">
+                                    <div class="owl-carousel">
+                                        <div class="item"><img src="img/bd/smSlider/pic-01.jpg" alt=""></div>
+                                        <div class="item"><img src="img/bd/smSlider/pic-02.jpg" alt=""></div>
+                                        <div class="item"><img src="img/bd/smSlider/pic-03.jpg" alt=""></div>
+                                        <div class="item"><img src="img/bd/smSlider/pic-04.jpg" alt=""></div>
+                                        <div class="item"><img src="img/bd/smSlider/pic-05.jpg" alt=""></div>
+                                        <div class="item"><img src="img/bd/smSlider/pic-06.jpg" alt=""></div>
+                                        <div class="item"><img src="img/bd/smSlider/pic-07.jpg" alt=""></div>
+                                        <div class="item"><img src="img/bd/smSlider/pic-08.jpg" alt=""></div>
+                                        <div class="item"><img src="img/bd/smSlider/pic-09.jpg" alt=""></div>
+                                        <div class="item"><img src="img/bd/smSlider/pic-10.jpg" alt=""></div>
+                                        <div class="item"><img src="img/bd/smSlider/pic-11.jpg" alt=""></div>
+                                    </div>
+                                </div>   
                            </div>
                         </div>
                         <div class="col-md-3">
@@ -123,7 +140,7 @@
     
     <script src="js/common.js"></script>
    <script>
-    $('.centerSection .owl-carousel').owlCarousel({
+    $('.mainSlider .owl-carousel').owlCarousel({
     loop:true,
     margin:10,
     responsiveClass:true,
@@ -140,6 +157,36 @@
             items:1,
             
         }
+    }
+});
+
+
+$('.smallSlider .owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    autoplay:false,
+    nav:true,
+    responsive:{
+        0:{
+            items:2,
+        },
+        600:{
+            items:3,
+        },
+        1000:{
+            items:6,
+            
+        }
+    }
+});
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    if (scroll >= 120) {
+        $(".sticky").addClass("stickyItem");
+    } else {
+        $(".sticky").removeClass("stickyItem");
     }
 });
    </script>
