@@ -80,9 +80,9 @@
                                     <div class="owl-carousel">
                                         <div class="item"><img src="img/bd/Slider-19052020-1.png" alt=""></div>
                                         <div class="item"><img src="img/bd/BD1.png" alt=""></div>
-                                        <div class="item"><img src="img/bd/BD2 (1).png" alt=""></div>
                                         <div class="item"><img src="img/bd/BD2.png" alt=""></div>
                                         <div class="item"><img src="img/bd/Slider-19052020-3.png" alt=""></div>
+                                        <div class="item"><img src="img/bd/BD2 (1).png" alt=""></div>
                                     </div>
                                 </div> 
                                 <div class="smallSlider mt-20 mb-20">
@@ -144,7 +144,7 @@
     loop:true,
     margin:10,
     responsiveClass:true,
-    autoplay:false,
+    autoplay:true,
     nav:true,
     responsive:{
         0:{
@@ -165,7 +165,7 @@ $('.smallSlider .owl-carousel').owlCarousel({
     loop:true,
     margin:10,
     responsiveClass:true,
-    autoplay:false,
+    autoplay:true,
     nav:true,
     responsive:{
         0:{
@@ -183,7 +183,7 @@ $('.smallSlider .owl-carousel').owlCarousel({
 
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
-    if (scroll >= 120) {
+    if (scroll >= 100) {
         $(".sticky").addClass("stickyItem");
     } else {
         $(".sticky").removeClass("stickyItem");
