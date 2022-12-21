@@ -21,7 +21,7 @@
 
     <!-- Side Nav End -->
 
-        <div class="mainContent home">
+        <div class="mainContent home stop">
             <div class="container-fluid sliderCMD">
                 <div class="row">
                     <div class="col-md-9 order-md-1">
@@ -76,6 +76,20 @@
                     </div>
                     
                     </div>  
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="visionMission vision">
+                                <span>Vision</span>
+                                <marquee behavior="" direction="left"> Be the leader in natural gas value-chain and beyond, with global presence, creating value for stakeholders with environmental responsibility. </marquee>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="visionMission mission">
+                                <span>Mission</span>
+                                <marquee behavior="" direction="left">  Enhancing quality of life through clean energy, and beyond.​​​  </marquee>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                     <div class="col-md-3">
                         <div class="card myApps mt-20">
@@ -730,6 +744,15 @@ $('.birthdays .owl-carousel').owlCarousel({
             items:4,
             
         }
+    }
+});
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    if (scroll >= 280) {
+        $(".sticky").addClass("stickyItem");
+    } else {
+        $(".sticky").removeClass("stickyItem");
     }
 });
     </script>

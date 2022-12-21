@@ -192,6 +192,23 @@ header .intranetHeading h1{
     
 }
 
+.visionMission{
+    padding: 10px;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.visionMission span{
+    background: #3f89ba;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px 0px 0 3px;
+}
+
 .dropdown {
     position: relative;
 }
@@ -362,6 +379,7 @@ header .intranetHeading h1{
     top: 0;
     background: #eee;
     padding: 10px;
+    display: none;
 }
 
 .sideNav .profile .logout svg{
@@ -525,6 +543,10 @@ header .intranetHeading h1{
     width: 45px;
     height: 50px;
     border-radius: 5px 0px 0px 5px;
+}
+
+.mainContent .sliderCMD .cmd ul li a{
+    display: block;
 }
 
 .mainContent .sliderCMD .cmd ul li span{
@@ -932,6 +954,7 @@ footer .footerBottom .email a{
     margin: 0;
     font-size: 22px;
     float: right;
+    color: #1caaec;
 }
 
 .navDepartment .bottomImg img{
@@ -1034,6 +1057,25 @@ footer .footerBottom .email a{
     padding-right: 5px;
 }
 
+.menuDepartments{
+    display: flex;
+    gap: 10px;
+    padding: 4px;
+}
+
+.menuDepartments li:after{
+    content: "|";
+    padding-left: 10px;
+}
+
+.menuDepartments li:nth-last-child(1):after{
+    display: none;
+}
+
+.menuDepartments li a{
+    color: #464545;
+}
+
 .department .centerSection .owl-carousel .owl-nav {
     position: absolute;
     top: 50%;
@@ -1078,6 +1120,61 @@ footer .footerBottom .email a{
     overflow: hidden;
 } 
 
+.tilesContent{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tilesContent .item{
+    background: #1caaec;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.tilesContent .item a{
+    color: #fdfdfd;
+}
+
+.tilesContent .item:hover{
+    background-color: #1caaec;
+}
+
+.centerSection .heading h4{
+    margin: 10px 15px 10px;
+    border-left: 3px solid #1d8ec3;
+    background: #fff;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 0px 2px 3px #0000000a;
+}
+
+.centerImg{
+    padding:15px;
+}
+
+.centerImg img{
+    width: 100%;
+}
+
+.centerContent{
+    padding:15px;
+}
+
+.centerContent ul li{
+    line-height: 30px;
+}
+
+.centerContent ul li:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0da";
+    color: #55595a;
+    padding-right: 7px;
+}
+
 .departmentTabs{
     min-height: 430px;
 }
@@ -1089,7 +1186,7 @@ footer .footerBottom .email a{
 }
 
 .tiles .item{
-    width: calc(33.3% - 30px);
+    width: calc(33.3% - 25px);
     background: #fff;
     padding: 10px;
     height: 220px;

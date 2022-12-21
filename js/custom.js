@@ -3,14 +3,7 @@ $('.sideNav').load('sideNav.html');
 $('#footer').load('footer.html');
 
 
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-    if (scroll >= 280) {
-        $(".sticky").addClass("stickyItem");
-    } else {
-        $(".sticky").removeClass("stickyItem");
-    }
-});
+
 
 
 
@@ -43,6 +36,21 @@ toggle between hiding and showing the dropdown content */
 //     }
 //   }
 // }
+
+$(window).ready(function(){
+    
+    $('.dropLeft').click(function(){
+        $('.dropLeftInner').toggle(300);
+        });
+        
+        $('.dropRight').click(function(){
+        $('.dropRightInner').toggle(300);
+        });
+        
+        $('.drop1').click(function(){
+        $('.dropInner1').toggle(300);
+        });
+ });
 
 var list =document.querySelectorAll('.menu ul li');
 
@@ -156,17 +164,9 @@ $(window).resize(function(){
 })
  .resize();//trigger the resize event on page load.
 
-$('.dropLeft').click(function(){
-$('.dropLeftInner').toggle(300);
-});
 
-$('.dropRight').click(function(){
-$('.dropRightInner').toggle(300);
-});
 
-$('.drop1').click(function(){
-$('.dropInner1').toggle(300);
-});
+
 
 
 const accordion = document.getElementsByClassName('contentBox');
@@ -204,8 +204,12 @@ for(i = 0; i<accordion.length; i++){
 
 // });
 
+var acc = document.getElementsByClassName('accordion');
+var i;
 
 
-
-
- 
+for(i = 0; i < acc.length; i++){
+    acc[i].addEventListener('click' , function(){
+        this.classList.toggle('active');
+    });
+}
