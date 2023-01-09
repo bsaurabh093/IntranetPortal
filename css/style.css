@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     margin:0;
@@ -26,12 +26,20 @@ hr{
     margin: 0;
 }
 
+.m-20{
+    margin:20px;
+}
+
 .mt-10{
     margin-top: 10px;
 }
 
 .mt-20{
-    margin-top: 20px;
+    margin-top: 20px !important;
+}
+
+.mb-10{
+    margin-bottom: 10px;
 }
 
 .mb-20{
@@ -154,6 +162,40 @@ header .notification .item{
     box-shadow: 1px 1px 1px 1px #0006;
 }
 
+header .notification .language .languageDropdown{
+    position: absolute;
+    top: 30px;
+    margin-top: 20px;
+    background: #fff;
+    width: 140px;
+    padding: 10px;
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 0px #000;
+    right: 0;
+}
+
+header .notification .language .languageDropdown ul li{
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+header .notification .language .languageDropdown ul li:nth-last-child(1){
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+header .notification .language .languageDropdown ul li a{
+    color:#777;
+}
+
+header .notification .language .languageDropdown ul li a img{
+    height: 15px;
+    width: 25px;
+    object-fit: cover;
+}
+
 header .notification .item:hover{
     box-shadow: 0px 0px 13px 2px #eee;
 }
@@ -162,20 +204,27 @@ header .notification .item svg{
     font-size: 20px;
 }
 
-header .notification .item .notoficationNo{
+header .notification .favApps .myApps{
+    display: none;
+}
+
+header .notification .language .languageDropdown{
+    display: none;
+}
+
+header .notification .language .showLanguageHeader{
+    display: block;
+    
+}
+
+header .notification .favApps .showAppsHeader{
+    display: block;
     position: absolute;
-    right: -10px;
-    top: -10px;
-    background: red;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: #fff;
-    padding: 5px;
-    font-size: 12px;
+    top: 30px;
+    right: 0;
+    width: 300px;
+    z-index: 2;
+    box-shadow: 0px 0px 2px 0px #000;
 }
 
 header .intranetHeading{
@@ -189,7 +238,7 @@ header .intranetHeading h1{
     color: #fff;
     font-weight: 300;
     text-transform: uppercase;
-    
+    text-align: right;
 }
 
 .visionMission{
@@ -236,7 +285,7 @@ header .intranetHeading h1{
     top: 0;
     padding: 20px;
     border-radius: 10px;
-    max-width: 1200px;
+    max-width: 1240px;
 }
 
 .dropdown-content a {
@@ -604,10 +653,41 @@ header .intranetHeading h1{
     background: #66b933;
 }
 
-.myApps , .quickLinks, .holidayList{
+.thought , .quickLinks, .holidayList{
     height: 200px;
 }
 
+.thoughOfDay{
+    position: relative;
+}
+
+.thought .content{
+    font-size: 14px;
+    color: #777;
+    border: 1px solid #eee;
+    padding: 17px 10px 10px;
+    height: 120px;
+    margin-top: 10px;
+    position: relative;
+    overflow: auto;
+}
+
+.thought .thoughOfDay:before{
+    content: '\f10e';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transform: translateY(-50%);
+    color: #1caaec;
+    font-size: 25px;
+    z-index: 1;
+
+}
+
+
+/* Old Apps Section Css  
 .apps ul{
     display: flex;
     margin: 10px 0;
@@ -619,7 +699,47 @@ header .intranetHeading h1{
     justify-content: center;
     display: flex;
     margin: 10px 0;
+    position: relative;
+    
 }
+
+.apps ul li a{
+    position: relative;
+    z-index: 1;
+}
+
+.apps ul li:before{
+    content: '1';
+    color: #0000001a;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -25px;
+    z-index: 0;
+}
+
+.apps ul li:nth-child(2):before{
+    content: '2';
+}
+
+.apps ul li:nth-child(3):before{
+    content: '3';
+}
+
+.apps ul li:nth-child(4):before{
+    content: '4';
+}
+
+.apps ul li:nth-child(5):before{
+    content: '5';
+}
+
+.apps ul li:nth-child(6):before{
+    content: '6';
+}
+
 
 .apps ul li a{
     border-radius: 5px;
@@ -632,12 +752,145 @@ header .intranetHeading h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .apps ul li a:hover{
     background: #eee;
     transform: translateY(-5px);
 }
+
+ Old Apps Section Css */
+
+
+.apps ul li a{
+    color: #777;
+    padding: 5px 0;
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    transition: .5s ease-in-out;
+}
+
+.apps ul li a:hover{
+    color: #3f89ba;
+}
+
+.apps ul li a svg{
+    width: 30px;
+    text-align: left;
+    margin-left: 0;
+    font-size: 14px !important;
+    color: #3f89ba;
+}
+
+.app ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.app ul li{
+    flex: 0 0 auto;
+    width: calc(33.3% - 10px);
+    position: relative;
+    background: #eee;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.app ul li a{
+    color: #3f89ba;
+    position: relative;
+    z-index: 1;
+}
+
+.app ul li:nth-child(1):before{
+    content: '1';
+    position: absolute;
+    z-index: 0;
+    font-size: 50px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #b9b9b9;
+    top: 50%;
+    line-height: 45px;
+    font-family: 'Noto Sans', sans-serif;
+    transform: translate(-50%, -50%);
+}
+
+.app ul li:nth-child(2):before{
+    content: '2';
+    position: absolute;
+    z-index: 0;
+    font-size: 50px;
+    text-align: center;
+    left: 20%;
+    transform: translateX(-50%);
+    color: #c1bdbd;
+    top: -12px;
+    line-height: 45px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.app ul li:nth-child(3):before{
+    content: '3';
+    position: absolute;
+    z-index: 0;
+    font-size: 50px;
+    text-align: center;
+    left: 85%;
+    transform: translateX(-50%);
+    color: #c1bdbd;
+    top: -12px;
+    line-height: 45px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.app ul li:nth-child(4):before{
+    content: '4';
+    position: absolute;
+    z-index: 0;
+    font-size: 50px;
+    text-align: center;
+    left: 85%;
+    transform: translateX(-50%);
+    color: #c1bdbd;
+    top: -12px;
+    line-height: 45px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.app ul li:nth-child(5):before{
+    content: '5';
+    position: absolute;
+    z-index: 0;
+    font-size: 50px;
+    text-align: center;
+    left: 85%;
+    transform: translateX(-50%);
+    color: #c1bdbd;
+    top: -12px;
+    line-height: 45px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.app ul li:nth-child(6):before{
+    content: '6';
+    position: absolute;
+    z-index: 0;
+    font-size: 50px;
+    text-align: center;
+    left: 85%;
+    transform: translateX(-50%);
+    color: #c1bdbd;
+    top: -12px;
+    line-height: 45px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
 
 .owl-dots{
     display: none;
@@ -707,6 +960,23 @@ button span{
 .holidayList .holiday{
     font-size: 30px;
     color: #484444;
+    position: relative;
+    z-index: 10;
+}
+
+.holidayList .item:hover .typeOfHoliday{
+    color:#fff;
+}
+
+.typeOfHoliday{
+    position: absolute;
+    right: -4px;
+    font-size: 80px;
+    color: #eeeeee91;
+    bottom: 0px;
+    line-height: 70px;
+    z-index: 1;
+    transition: .5s ease-in-out;
 }
 
 #pills-tab{
@@ -796,7 +1066,7 @@ button span{
 .documentLiabraries .item{
     padding: 10px 0;
     border-bottom: 1px solid #eee;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .documentLiabraries .item:hover {
@@ -809,6 +1079,17 @@ button span{
 
 .liabraries .liabrariesLink{
     color: #3f89ba;
+}
+
+.liabraries .liabrariesLink span{
+    display: block;
+    font-size: 14px;
+    color: #777;
+}
+
+.liabraries .liabrariesLink span:before{
+    content: '--';
+    margin-right: 10px;
 }
 
 .liabraries .lastUpdated {
@@ -924,6 +1205,7 @@ footer .footerBottom .email a{
     display: flex;
     min-height: 55px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .departmentsPath ul li{
@@ -961,6 +1243,7 @@ footer .footerBottom .email a{
     height: 220px;
     width: 100%;
     object-fit: cover;
+    display: none;
 }
 
 .drop{
@@ -972,7 +1255,7 @@ footer .footerBottom .email a{
 }
 
 .dropInner{
-    display: none;
+    display: block;
 }
 
 .dropInner li{
@@ -985,6 +1268,8 @@ footer .footerBottom .email a{
     color: #777;
     padding: 10px;
     display: block;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 .dropInner li a:hover{
@@ -1039,6 +1324,9 @@ footer .footerBottom .email a{
 .centerNav{
     padding:6px;
     background-color: #e7e3e3;
+    margin:0 20px;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 .centerNav marquee ul{
@@ -1074,6 +1362,11 @@ footer .footerBottom .email a{
 
 .menuDepartments li a{
     color: #464545;
+}
+
+.department .centerSection{
+    margin: 0 20px;
+    padding:5px;
 }
 
 .department .centerSection .owl-carousel .owl-nav {
@@ -1176,18 +1469,20 @@ footer .footerBottom .email a{
 }
 
 .departmentTabs{
-    min-height: 430px;
+    min-height: 740px;
+    padding: 20px;
 }
 
 .tiles{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row;
 }
 
 .tiles .item{
-    width: calc(33.3% - 25px);
-    background: #fff;
+    width: calc(33.3% - 20px);
+    background: #efefefab;
     padding: 10px;
     height: 220px;
     margin: 10px;
@@ -1233,3 +1528,137 @@ footer .footerBottom .email a{
     white-space: nowrap;
 }
 /* Department End */
+
+/* Accordion start */
+
+#accordian {
+    margin: 0px auto 0 auto;
+}
+
+#accordian h3{
+    margin: 0;
+    position: relative;
+}
+
+#accordian .active h3{
+    background-color: #1d8ec345;
+}
+
+/* #accordian h3 a {
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 34px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+} */
+
+#accordian h3:hover {
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+}
+
+#accordian h3::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0da";
+    position: absolute;
+    right: 10px;
+    z-index: 9;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1caaec;
+    font-size: 15px;
+    transition: .5s ease-in-out;
+}
+
+.active h3::after{
+    transform: rotate(90deg) !important;
+    top:30% !important;
+}
+
+#accordian li {
+    list-style-type: none;
+    position: relative;
+} 
+
+#accordian ul ul li a,
+#accordian h4 {
+    color: #504f4f;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 27px;
+    display: block;
+    padding: 0 15px;
+    transition: all 0.15s;
+    position: relative;
+}
+
+#accordian ul ul {
+    display: none;
+}
+
+#accordian li.active>ul {
+    display: block;
+}
+
+#accordian ul ul ul {
+    margin-left: 15px;
+    border-left: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+#accordian a:not(:only-child):after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0da";
+    position: absolute;
+    right: 10px;
+    z-index: 9;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1caaec;
+    font-size: 14px;
+    transition: .5s ease-in-out;
+}
+
+#accordian .active ul li{
+    background: #ddd;
+    border-color: #d1d1d1;
+}
+
+#accordian .active>a:not(:only-child):after {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+/* Accordion end*/
+
+/* Static Page Css */
+
+.mainHeading h3{
+    background: #f3f3f3;
+    padding: 10px;
+    border-left: 3px solid #1D8EC1;
+    padding-left: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 22px;
+
+}
+
+.subContent h4{
+    font-size: 20px;
+}
+
+.subContent h4:before{
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #1d8ec3;
+    display: inline-block;
+    transform: translate(-5px, -5px);
+    margin-left: 5px;
+}
+
+
+/* Static Page Css */

@@ -3,12 +3,24 @@
         display: none;
     }
 
+    header .search {
+        position: relative;
+        flex: 0 0 10%;
+    }
+    header .intranetHeading {
+        flex: 0 0 55%;
+    }
+    header .notification {
+        display: flex;
+        flex: 0 0 25%;
+    }
+
     header .search svg{
-        width: 35px;
-        height: 35px;
-        padding: 10px;
+        width: 25px;
+        height: 25px;
+        padding: 7px;
         border-radius: 50%;
-        top: 0;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         box-sizing: border-box !important;
@@ -17,11 +29,12 @@
         box-shadow: 1px 1px 1px 1px #0006;
     }
     header .notification .item {
-        width: 35px;
-        height: 35px;
+        width: 25px;
+        height: 25px;
+        margin:0 2px;
     }
     header .notification .item svg {
-        font-size: 17px;
+        font-size: 13px;
     }
     #searchInput{
     position: absolute;
@@ -36,7 +49,7 @@
         display: block !important;
     }
     header .intranetHeading h1 {
-        font-size: 17px;
+        font-size: 16px;
         margin: 0;
     }
     header .logo {
@@ -48,10 +61,24 @@
     header .rightHeader {
         padding: 10px 5px;
     }
+    header .notification .language .languageDropdown {
+        margin-top: 20px;
+        width: 110px;
+        padding: 10px;
+    }
+    header .notification .language .languageDropdown ul li {
+        padding: 5px 0;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 5px;
+    }
+    header .notification .language .languageDropdown ul li a {
+        color: #777;
+        font-size: 14px;
+    }
     .sideNav .profile {
         padding: 10px;
         overflow: hidden;
-        padding-top: 40px;
+        padding-top: 10px;
     }
 
     .sideNav .userImg img{
@@ -61,10 +88,26 @@
         margin: 10px 0 5px;
         font-size: 17px;
         white-space: nowrap;
+        display: none;
     }
     .sideNav .profile .userMail {
         font-size: 14px;
-    }    
+        display: none;
+    }   
+    .dropdown:after {
+        position: relative;
+        transform: translateY(-100%);
+        float: right;
+        display: none;
+    } 
+
+    .sideNavShow .dropdown:after{
+        display: block !important;
+    }
+
+    .sideNavShow .userName, .sideNavShow .userMail{
+        display: block !important;
+    }
     .sideNav .menu {
         padding: 5px 10px;
     }
@@ -73,17 +116,22 @@
     }
     .sideNav {
         width: 100%;
-        max-width: 15%;
+        max-width: 50px;
         transition: .5s ease-in-out;
+        position: absolute;
     }
     .sideNavShow{
         max-width: 50%;
     }
     .stickyItem {
-        max-width: 15%;
+        max-width: 50px;
+        position: sticky;
+        top: 0;
     }
     .mainContent {
-        width: 85%;
+        width: 86%;
+        left: 14%;
+        position: relative;
     }
     .sideNavShow #responsiveHide svg{
         color: #777;
@@ -114,11 +162,13 @@
     }
     #responsiveHide{
         position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 9;
-        padding: 5px;
-        background: #eee;
+    top: 0;
+    right: -26px;
+    z-index: 9;
+    padding: 3px 6px;
+    background: #ffffff;
+    height: 28px;
+    box-shadow: 4px 3px 3px 0px #0000001a;
     }
     .sideNav .profile .logout {
         position: absolute;
@@ -192,6 +242,14 @@
     }
     .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav {
         top: -30px;
+    }
+
+    .centerNav {
+        margin: 20px 0px 0;
+    }
+    .department .centerSection {
+        margin: 0px 0px 20px;
+        padding: 0;
     }
 
     .holidayList .holiday {

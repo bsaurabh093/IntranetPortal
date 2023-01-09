@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+
+
+<!-- Header Start-->
+<div id="header"></div>
+<!-- headerEnd -->
+
+<main class="d-flex main">
+   <!-- Side Nav Start-->
+
+   <div class="sideNav"></div>
+
+   <!-- Side Nav End -->
+	
+	<div class="mainContent ScenariosIndex ">
+		<div class="departmentSubHead">
+			<div class="container-fluid">
+				<div class="row align-center">
+					<div class="col-md-6">
+						<div class="departmentsPath">
+							<ul>
+								<li><a href="#">Gail Intranet</a></li>
+								<li><a href="#">BIS</a></li>
+								<li><a href="#">GMS</a></li>
+								<li><a href="#">Scenario</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="departmentName">
+							<h1>GAIL- GMS Implementation
+							</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="departmentTabs BisGmsScenario card m-20">
+		<div class="container-fluid">
+			<div class="mainHeading ">
+				<h3>Scenarios in GMS</h3>
+			</div>
+			<div class="subContent">
+				<div class="subHeading mb-10">
+					<h4>Objective</h4>
+				</div>
+				<p>
+				This document outlines various possible scenarios that can occur during a daily or fortnightly GMS execution. This would also detail the various steps to be followed in case something needs to be altered in between this execution.
+				</p>
+				<h4 class="mb-10 mt-20">Flow Chart Legend:</h4>
+				<table class="table-bordered table mb-20" align="center" cellpadding=0 cellspacing=0>
+					<tr>
+						<td>
+							<img src="img/department/bis/image003.gif" alt="Image">
+						</td>
+						<td valign="top" >In the flow chart, the boxes indicated as Green refer to the business process steps already executed.              
+						</td>
+					</tr>
+					<tr>
+						<td ><img src="img/department/bis/image004.gif" alt="Images"></td>
+						<td valign="top" >
+						<p>In the flow chart, the box indicated as Red refers to the business process step where the need to change / update was identified.         
+						</p>
+						</td>
+					</tr>
+				</table>
+				<h4 class="mb-10 mt-20">Scenario 1: Change in Nominated Qty. after Nomination Upload for Single Day / Multiple Days</h4>
+				<p><b><u>Description:</u></b> Nominations have been uploaded for a single Day and then there is a change to the Nominated Quantity for the uploaded contracts.</p>
+				<div align="center">
+					<img src="img/department/bis/image005.gif" alt="Images">
+				</div>
+				<p><b><u>Steps to be followed:</u></b></p>
+				<ul>
+					<li>Create
+					a fresh nomination upload excel sheet with the delta changes. By doing
+					this, there is a log for the changes made. Multiple Excel sheets would be
+					needed per Gas Day wherein there is a change.
+					</li>
+					<li >Update
+					the nomination qty. for the respective contract and upload the excel sheet
+					using the transaction YRXR001. 
+					</li>
+					<li>Check
+					in Display Nominations(O4NSN) if the contractual quantities have been
+					updated
+					</li>
+				</ul>
+				<h4 class="mb-10 mt-20">Scenario 2: Change in Measurements (Volume, GCV, NCV) before Posting in Measurement Editor for single / multiple days</h4>
+				<p><b><u>Description:</u></b> <br>Nominations Measurements have been uploaded for a single day / multiple days and then there is a change to the Measurement Values that have been uploaded.
+				</p>			
+				<div align="center">
+					<img src="img/department/bis/image006.gif" alt="Images">
+				</div>
+				<p><b><u>Steps to be followed:</u></b></p>
+				<ul>
+					<li>Prepare the updated measurement excel sheet for all dates together.</li>
+					<li >Upload the measurement sheet using Measurement Upload (YRXU002). </li>
+					<li >Check in the Measurement Editor (YRXU003 for all dates), if the uploaded values
+					are showing up as needed.</li>
+				</ul>
+				<h4 class="mb-10 mt-20">Scenario 3: Change in Nomination Quantity after upload of Measurements</h4>
+				<p><b><u>Description:</u></b> Nominations Measurements have been uploaded for a single day / multiple days and then there is a change to the Contractual Nominated Quantity for the already uploaded contracts.
+				</p>
+				<div align="center">
+					<img src="img/department/bis/image007.gif" alt="Images">
+				</div>
+				<p><b><u>Steps to be followed:</u></b></p>
+				<ul>
+				<li>Create a fresh nomination upload excel sheet with the delta changes. By doing
+					this, there is a log for the changes made.</li>
+				<li>Update the nomination qty. for the respective contract and upload the excel sheet
+					using the transaction YRXR001. </li>
+				<li>Check in O4NSN if the contractual quantities have been updated</li>
+				<li><b>Note: No Need to upload the Measurement again if measurements have already been
+					uploaded.</b></li>
+				</ul>
+				<h4 class="mb-10 mt-20">Scenario 4: Change in Measurements after posting in Measurement Editor</h4>
+				<p align="justify"><b><u>Description:</u></b> Measurement Editor has been posted and there is a change to the uploaded Qty (Volume, GCV, NCV) for a single / multiple days.</p>
+				<div align="center" >
+				<img src="img/department/bis/image008.gif" alt="Images">
+				</div>
+				<p><b><u>Steps to be followed:</u></b></p>
+				<ul>
+				<li >Prepare the updated measurement excel sheet for all dates together. </li>
+				<li >Upload the measurement sheet using Measurement Upload (YRXU002).  </li>
+				<li >Check in the Measurement Editor (YRXU003 for all dates), if the uploaded values
+					are showing up as needed. </li>
+				<li >Post in Measurement Editor again for the single day so that allocations are
+					triggered. </li>
+				</ul>
+				<h4 class="mb-10 mt-20">Scenario 5: Change in Nomination quantity after posting in Measurement Editor</h4>
+				<p><b><u>Description: </u></b> Measurement Editor (Allocations) has been posted and then there is a change to the Nominated Qty for single or multiple days. </p>
+				<div align="center">
+					<img src="img/department/bis/image009.gif" alt="Images">
+				</div>
+				<p><b><u>Steps to be followed:</u></b></p>
+				<ul>
+				<li >Create multiple nomination upload excel sheets (per gas day) with the delta
+					changes. By doing this, there is a log for the changes made. </li>
+				<li >Update the nomination qty. for the respective contract and upload the excel sheet
+					using the transaction YRXR001.  </li>
+				<li >Check in O4NSN if the contractual quantities have been updated. </li>
+				<li >Re-Run Measurement Editor (YRXU003) for the gas days which have been updated. </li>
+				</ul>
+				<h4 class="mb-10 mt-20">Scenario 6: Change in Nomination Quantity after running Daily Quantity Adjustments (OD1)</h4>
+				<p><b><u>Description: </u></b> Daily Quantity Adjustments (OD1) has been performed and then there is a change to the Nominated Qty for single or multiple days. </p>
+				<div align="center"> 
+					<img src="img/department/bis/image010.gif" alt="Images">
+				</div>
+				<p ><b><u>Steps to be followed: </u></b></p>
+				<ul>
+				<li >Create multiple nomination upload excel sheets (per gas day) with the delta
+					changes. By doing this, there is a log for the changes made. </li>
+				<li >Update the nomination qty. for the respective contract and upload the excel sheet
+					using the transaction YRXR001.  </li>
+				<li >Check in O4NSN if the contractual quantities have been updated. </li>
+				<li >Check if Measurement Values are the same or need to be updated. </li>
+				<li >Re-Run Measurement Editor (YRXU003) for the gas days which have been updated. </li>
+				<li >Re-Run Daily Quantity Adjustments (OD1) for the gas dates where there is an
+					update. </li>
+				</ul>
+				<h4 class="mb-10 mt-20">Scenario 7: Change in Uploaded Measurements after running Daily Quantity Adjustments (OD1) </h4>
+				<p><b><u>Description: </u></b> Daily quantity adjustments have been processed and then there is a need to change the Measurement Values for single or multiple days.</p>
+				<div align="center">
+					<img src="img/department/bis/image011.gif" alt="Images">
+				</div>
+				<p><b><u>Steps to be followed: </u></b></p>
+				<ul>
+				<li >Prepare the updated measurement excel sheet for all dates together. </li>
+				<li >Upload the measurement sheet using Measurement Upload (YRXU002).  </li>
+				<li >Check in the Measurement Editor (YRXU003 for all dates), if the uploaded values
+					are showing up as needed. </li>
+				<li >Post in Measurement Editor again for the multiple days so that fresh
+					allocations are triggered. </li>
+				<li >Re-Run Daily Quantity Adjustments (OD1) for the gas dates where there is an
+					update. </li>
+				</ul>
+				<h4 class="mb-10 mt-20">Scenario 8: Change in Nominated Qty after posting deliveries from Allocation Editor</h4>
+				</p>
+				<p><b><u>Description: </u></b> Deliveries have been posted for single / multiple days (using Allocation Editor) and then there is a change to the Nomination Qty.</p>
+				<div align="center"> 
+					<img src="img/department/bis/image012.gif" alt="Images">
+				</div>
+				<p><b><u>Steps to be followed: </u></b></p> 
+				<ul>
+				<li >Reverse
+					all the Deliveries manually by using the transaction O4TENREV.[Search for
+					the Tickets by using the transaction O4NSN] </li>
+				<li >Create
+					a fresh nomination upload excel sheet with the delta changes. By doing
+					this, there is a log for the changes made. </li>
+				<li >Update
+					the nomination qty. for the respective contract and upload the excel sheet
+					using the transaction YRXR001.  </li>
+				<li >Check
+					in O4NSN if the contractual quantities have been updated </li>
+				</ul>
+				<ul>
+				<li >Re-Run Measurement Editor again for the multiple dates so that fresh allocations
+					are triggered. </li>
+				<li >Re-Run Daily Quantity Adjustments (OD1) for the multiple dates where there is an
+					update. </li>
+				<li >Re-Run Allocation Editor (YRXU001) and post deliveries for all those customers
+					where nominations have changed. </li>
+				</ul>
+				<h4 class="mb-10 mt-20">Scenario 9: Change in Measurements after posting deliveries from Allocation Editor</h4>
+				<p ><b><u>Description: </u></b> Deliveries have been posted for a multiple days (using Allocation Editor) and then there is a change to the Measurement Values for multiple days. </p>
+				<div align="center" >
+					<img src="img/department/bis/image013.gif" alt="Images">
+				</div>
+				<p><b><u>Steps to be followed: </u></b></p>
+				<ul>
+				<li >Reverse
+					all the Deliveries(for business locations where there is a change)
+					manually by using the transaction O4TENREV.[Search for the Tickets by
+					using the transaction O4NSN] </li>
+				</ul>
+				<ul>
+				<li >Prepare
+					the updated measurement excel sheet for all dates together. </li>
+				<li >Upload
+					the measurement sheet using Measurement Upload (YRXU002).  </li>
+				<li >Check
+					in the Measurement Editor (YRXU003 for all dates), if the uploaded values
+					are showing up as needed. </li>
+				<li >Post
+					in Measurement Editor again for the multiple days so that fresh
+					allocations are triggered. </li>
+				<li >Re-Run
+					Measurement Editor again for the multiple dates so that fresh allocations
+					are triggered. </li>
+				<li >Re-Run
+					Daily Quantity Adjustments (OD1) for the multiple dates where there is an
+					update. </li>
+				<li >Re-Run
+					Allocation Editor (YRXU001) and post deliveries for all those customers
+					where nominations have changed. </li>
+				</ul>
+				<h4 class="mb-10 mt-20">Scenario 10: Change in Nominations after Billing is completed</h4>
+				<p><b><u>Description: </u></b> Billing has been completed for single or multiple customers and then there is a change to the Nomination Qty for them. </p>
+				<div align="center" > 
+					<img src="img/department/bis/image014.gif" alt="Images">
+				</div>
+				<p ><b><u>Steps to be followed: </u></b></p>
+				<ul>
+				<li >Cancel
+					the Bill Document generated using the Transaction VF11. </li>
+				<li >Reverse
+					all the Deliveries manually by using the transaction O4TENREV.[Search for
+					the Tickets by using the transaction O4NSN] </li>
+				<li >Create
+					a fresh nomination upload excel sheet with the delta changes. By doing
+					this, there is a log for the changes made. </li>
+				<li >Update
+					the nomination qty. for the respective contract and upload the excel sheet
+					using the transaction YRXR001.  </li>
+				<li >Check
+					in O4NSN if the contractual quantities have been updated </li>
+				</ul>
+				<ul>
+				<li >Re-Run
+					Measurement Editor again for the multiple dates so that fresh allocations
+					are triggered. </li>
+				<li >Re-Run
+					Daily Quantity Adjustments (OD1) for the multiple dates where there is an
+					update. </li>
+				<li >Re-Run
+					Allocation Editor (YRXU001) and post deliveries for all those customers
+					where nominations have changed. </li>
+				</ul>
+				<h4 class="mb-10 mt-20">Scenario 11: Change in Measurements after Billing is completed</h4>
+				<p><b><u>Description: </u></b>Billing has been completed for single or multiple customers and then there is a change to the Measurements captured for these customers for single / multiple days </p>
+				<div align="center" >
+					<img src="img/department/bis/image015.gif" alt="Images">
+				</div>
+				<p><b><u>Steps to be followed: </u></b></p>
+				<ul>
+				<li >Cancel the Billing Document generated using the Transaction VF11. </li>
+				<li >Reverse all the Deliveries for the customers for the specific dates, manually by
+					using the transaction O4TENREV.[Search for the Tickets by using the
+					transaction O4NSN] </li>
+				<li >Create a fresh nomination upload excel sheet with the delta changes. By doing
+					this, there is a log for the changes made. </li>
+				<li >Update the nomination qty. for the respective contract and upload the excel sheet
+					using the transaction YRXR001.  </li>
+				<li >Check in O4NSN if the contractual quantities have been updated </li>
+				</ul>
+				<ul>
+				<li >Re-Run Measurement Editor again for the multiple dates so that fresh allocations
+					are triggered. </li>
+				<li >Re-Run Daily Quantity Adjustments (OD1) for the multiple dates where there is an
+					update. </li>
+				<li >Re-Run Allocation Editor (YRXU001) and post deliveries for all those customers
+					where nominations have changed. </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Footer Start-->
+<div id="footer"></div>
+<!-- Footer End -->
+</div>
+
+
+
+</main>
+
+
+
+<script src="js/common.js"></script>
+</body>
+</html>

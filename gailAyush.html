@@ -46,7 +46,7 @@
                 <div class="container-fluid g-0">
                     <div class="row g-0">
                         <div class="col-md-3">
-                            <div class="leftNavDepartment navDepartment">
+                            <div class="leftNavDepartment card navDepartment">
                                 <div class="drop dropLeft">
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
@@ -65,36 +65,49 @@
                         </div>
                         <div class="col-md-6">
                             <div class="centerNav">
-                                <ul class="menuDepartments">
-                                    <li><a href="#">Medical Circulars</a></li>
-                                    <li><a href="#">OHC</a></li>
-                                    <li><a href="#">Speech Therapy</a></li>
-                                    <li><a href="#">Forms</a></li>
-                                </ul>
+                                <div id="cssmenu">
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Products</a>
+                                            <ul>
+                                                <li><a href="#">Widgets</a></li>
+                                                <li><a href="#">Support</a></li>
+                                                <li><a href="#">Another Widget</a></li>
+                                                <li>
+                                                    <a href="#">Widgets 2</a>
+                                                    <ul>
+                                                        <li><a href="#">Plugins</a></li>
+                                                        <li><a href="#">Extensions</a></li>
+                                                        <li><a href="#">Modules</a>
+                                                            <ul>
+                                                                <li><a href="#">Plugins</a></li>
+                                                                <li><a href="#">Extensions</a></li>
+                                                                <li><a href="#">Modules</a>
+                                                                    <ul>
+                                                                        <li><a href="#">Plugins</a></li>
+                                                                        <li><a href="#">Extensions</a></li>
+                                                                        <li><a href="#">Modules</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="centerSection">
-                                <div class="mainSlider">
+                                <div class="mainSlider card mt-20">
                                     <div class="owl-carousel">
                                         <div class="item"><img src="img/bd/Slider-19052020-1.png" alt=""></div>
                                         <div class="item"><img src="img/bd/BD1.png" alt=""></div>
                                         <div class="item"><img src="img/bd/BD2.png" alt=""></div>
                                         <div class="item"><img src="img/bd/Slider-19052020-3.png" alt=""></div>
                                         <div class="item"><img src="img/bd/BD2 (1).png" alt=""></div>
-                                    </div>
-                                </div> 
-                                <div class="smallSlider mt-20 mb-20">
-                                    <div class="owl-carousel">
-                                        <div class="item"><img src="img/bd/smSlider/pic-01.jpg" alt=""></div>
-                                        <div class="item"><img src="img/bd/smSlider/pic-02.jpg" alt=""></div>
-                                        <div class="item"><img src="img/bd/smSlider/pic-03.jpg" alt=""></div>
-                                        <div class="item"><img src="img/bd/smSlider/pic-04.jpg" alt=""></div>
-                                        <div class="item"><img src="img/bd/smSlider/pic-05.jpg" alt=""></div>
-                                        <div class="item"><img src="img/bd/smSlider/pic-06.jpg" alt=""></div>
-                                        <div class="item"><img src="img/bd/smSlider/pic-07.jpg" alt=""></div>
-                                        <div class="item"><img src="img/bd/smSlider/pic-08.jpg" alt=""></div>
-                                        <div class="item"><img src="img/bd/smSlider/pic-09.jpg" alt=""></div>
-                                        <div class="item"><img src="img/bd/smSlider/pic-10.jpg" alt=""></div>
-                                        <div class="item"><img src="img/bd/smSlider/pic-11.jpg" alt=""></div>
                                     </div>
                                 </div>   
                            </div>
@@ -158,14 +171,15 @@
     }
 });
 
-// $(window).scroll(function() {    
-//     var scroll = $(window).scrollTop();
-//     if (scroll >= 100) {
-//         $(".sticky").addClass("stickyItem");
-//     } else {
-//         $(".sticky").removeClass("stickyItem");
-//     }
-// });
+
+   </script>
+
+   <script src="js/menumaker.js"></script>
+   <script>
+    $("#cssmenu").menumaker({
+		title: "Menu",
+		format: "multitoggle"
+	});
    </script>
     </body>
 </html>
