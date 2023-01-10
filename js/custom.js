@@ -13,6 +13,23 @@ $(window).scroll(function() {
 });
 
 
+$(window).resize(function() {
+if ($(window).width() < 767) {
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+        if (scroll >= 120) {
+            $(".sticky").addClass("stickyItem");
+        } else {
+            $(".sticky").removeClass("stickyItem");
+        }
+    });
+} 
+// else {
+//     $('.sticky').removeClass('f-nav');
+// }
+}).resize();
+
+
 $(document).ready(function(){
     $('.favApps').click(function(){
         $('.myApps').toggleClass('showAppsHeader');
@@ -110,23 +127,13 @@ $(document).ready(function(){
         }
         event.stopPropagation();
     });
+
+    $(document).on('click','#responsiveHide',function(){
+      $('.sideNav').toggleClass('sideNavShow');
+
+ });
     
 })
 
-$(document).ready(function(){
-    $('#responsiveHide').click(function(){
-        alert('show');
-        $('.sideNav').toggleClass('sideNavShow');
-    });
-})
 
-$(window).resize(function(){
-    var width = $(window).width();
-    if(width < 767){
-        $('.sticky').removeClass('stickyItem');
-    }else{
-        $('.sticky').addClass('stickyItem');
-    }
-})
- .resize();
- //trigger the resize event on page load.
+

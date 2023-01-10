@@ -52,6 +52,10 @@ li{
     list-style: none;
 }
 
+.responsive{
+    display: none;
+}
+
 .blue{
     color:#1caaec;
 }
@@ -315,7 +319,7 @@ header .intranetHeading h1{
     max-width: 20%;
     background-color: #fff;
     position: relative;
-    height: auto;
+    /* height: auto; */
 }
 
 .sideNav #responsiveHide{

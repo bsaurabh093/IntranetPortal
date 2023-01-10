@@ -99,3 +99,14 @@ toggle between hiding and showing the dropdown content */
 //     }
 //   }
 // }
+
+// $(window).resize(function(){
+//     var width = $(window).width();
+//     if(width < 767){
+//         $('.sticky').removeClass('stickyItem');
+//     }else{
+//         $('.sticky').addClass('stickyItem');
+//     }
+// })
+//  .resize();
+ //trigger the resize event on page load.

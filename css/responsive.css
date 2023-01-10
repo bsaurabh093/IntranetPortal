@@ -1,4 +1,10 @@
 @media (max-width:767px){
+    .responsive{
+        display: block;
+    }
+    .non-responsive{
+        display: none;
+    }
     .search input[type="text"]{
         display: none;
     }
@@ -75,6 +81,51 @@
         color: #777;
         font-size: 14px;
     }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        background-color: #fff;
+        min-width: 100%;
+        overflow: visible;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        left: 0;
+        top: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+    .sideNav .menu .dropdown-content .subMenu ul li a {
+        white-space: inherit;
+    }
+    .dropdown-content a {
+        padding: 5px 5px;
+    }
+    .sideNav .menu .dropdown-content .subMenu ul li:before {
+        top: 5px;
+        left: 10px;
+        font-size: 14px;
+    }
+    .sideNav .menu .dropdown-content .subMenu ul li {
+        border: 1px solid #eee;
+    }
+    .showDrop{
+        padding-bottom: 20px !important;
+    }
+
+    .sideNavShow .poll .responsive{
+        display: none;
+    }
+
+    .sideNavShow .poll .non-responsive{
+        display: block;
+    }
+    .sideNav .menu .dropdown-content .subMenu a {
+        color: #464545;
+        font-size: 14px;
+    }
     .sideNav .profile {
         padding: 10px;
         overflow: hidden;
@@ -114,6 +165,14 @@
     .sideNav .sticky{
         overflow: hidden;
     }
+
+    .sideNav .stickyItem{
+        max-width: 50px;
+    }
+
+    .sideNavShow .sticky{
+        max-width: 100%;
+    }
     .sideNav {
         width: 100%;
         max-width: 50px;
@@ -121,11 +180,11 @@
         position: absolute;
     }
     .sideNavShow{
-        max-width: 50%;
+        max-width: 100%;
     }
-    .stickyItem {
-        max-width: 50px;
-        position: sticky;
+    .sideNavShow .stickyItem {
+        max-width: 100%;
+        position: fixed;
         top: 0;
     }
     .mainContent {
@@ -163,13 +222,18 @@
     #responsiveHide{
         position: absolute;
     top: 0;
-    right: -26px;
+    right: -26px !important;
     z-index: 9;
     padding: 3px 6px;
     background: #ffffff;
     height: 28px;
     box-shadow: 4px 3px 3px 0px #0000001a;
     }
+
+    .sideNavShow #responsiveHide{
+        right: 0 !important;
+    }
+
     .sideNav .profile .logout {
         position: absolute;
         left: 0;
@@ -192,17 +256,20 @@
     .heading h4 {
         text-transform: uppercase;
         font-size: 16px;
+        padding-left: 12px;
     }
     .poll .heading {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .poll ul li {
         padding-bottom: 5px;
         margin-bottom: 5px;
+        padding-left: 15px;
     }
     .poll a {
         color: #fff;
         font-size: 14px;
+        padding-left: 5px;
     }
 
     .mainContent .sliderCMD .slider img {
