@@ -17,10 +17,10 @@ $(window).resize(function() {
 if ($(window).width() < 767) {
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
-        if (scroll >= 120) {
-            $(".sticky").addClass("stickyItem");
+        if (scroll >= 60) {
+            $(".sideNav").addClass("stickySideNav");
         } else {
-            $(".sticky").removeClass("stickyItem");
+            $(".sideNav").removeClass("stickySideNav");
         }
     });
 } 
