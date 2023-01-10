@@ -111,7 +111,7 @@
     .sideNav .menu .dropdown-content .subMenu ul li {
         border: 1px solid #eee;
     }
-    .showDrop{
+    .dropdown.active{
         padding-bottom: 20px !important;
     }
 
@@ -139,7 +139,21 @@
         margin: 10px 0 5px;
         font-size: 17px;
         white-space: nowrap;
-        display: none;
+        /* display: none; */
+        visibility: hidden;
+    }
+
+    .sideNav .profile .userName::first-letter{
+        font-size: 25px;
+        visibility: visible;
+        padding-left: 4px;
+        font-style: normal;
+    }
+    .sideNavShow .profile .userName{
+        visibility: visible;
+    }
+    .sideNavShow .profile .userName::first-letter{
+        font-size: inherit;
     }
     .sideNav .profile .userMail {
         font-size: 14px;
@@ -160,7 +174,7 @@
         display: block !important;
     }
     .sideNav .menu {
-        padding: 5px 10px;
+        padding: 10px;
     }
     .sideNav .sticky{
         overflow: hidden;
@@ -184,13 +198,25 @@
     }
     .sideNavShow .stickyItem {
         max-width: 100%;
-        position: fixed;
+        /* position: fixed; */
         top: 0;
     }
     .showDrop .dropdown-content {
+        display: none;
+    }
+    .sideNavShow .showDrop .dropdown-content {
         display: flex;
         overflow: scroll;
         max-height: 350px;
+    }
+
+    .stickySideNav{
+        position: fixed;
+        position: -webkit-sticky;
+        top: 0;
+    }
+    .stickyItem{
+        position: relative;
     }
     .mainContent {
         width: 86%;
