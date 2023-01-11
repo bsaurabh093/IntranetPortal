@@ -5,7 +5,7 @@
     .non-responsive{
         display: none;
     }
-    .search input[type="text"]{
+    .search input{
         display: none;
     }
     header{
@@ -57,17 +57,19 @@
     }
 
     .search .show{
-        display: block !important;
+        display: block;
     }
     header .intranetHeading h1 {
         font-size: 16px;
         margin: 0;
     }
     header .logo {
-        padding: 15px 10px;
+        padding: 10px;
     }
     header .logo img{
-        width:100%;
+        width: 100%;
+        height: 44px;
+        object-fit: contain;
     }
     header .rightHeader {
         padding: 10px 5px;
@@ -198,6 +200,7 @@
         max-width: 50px;
         transition: .5s ease-in-out;
         position: absolute;
+        height: 100vh;
     }
     .sideNavShow{
         max-width: 100%;
@@ -225,8 +228,8 @@
         position: relative;
     }
     .mainContent {
-        width: 86%;
-        left: 14%;
+        width: calc(100% - 50px);
+        left: 50px;
         position: relative;
     }
     .sideNavShow #responsiveHide svg{
@@ -392,5 +395,11 @@
     }
     footer .footerBottom {
         padding: 10px;
+    }
+}
+
+@media (min-width:460px) and (max-width:767px){
+    .mainContent .sliderCMD .slider img {
+        height: 180px;
     }
 }
